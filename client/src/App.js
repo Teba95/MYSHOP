@@ -7,19 +7,26 @@ import Pagenotfound from './pages/Pagenotfound';
 import Policy from './pages/Policy';
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import Dashboard from "./pages/user/Dashboard";
+import PrivateRoute from "./component/Layouts/routes/Private";
 
 function App() {
   return (
     <>
-      <Routes>
+      <Routes>x
+
         <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<PrivateRoute/>} />
+            <Route path="" element={<Dashboard />}> 
+        </Route>
         <Route path="/about" element={<About />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/policy" element={<Policy />} />
         <Route path="*" element={<Pagenotfound />} />
-      </Routes>
+
+    </Routes>
     </>
   );
 }

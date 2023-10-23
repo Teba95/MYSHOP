@@ -2,6 +2,7 @@ import React from 'react'
 import Layouts from '../component/Layouts/Layouts'
 import { useAuth } from '../context/Auth';
 const Home = () => {
+  // eslint-disable-next-line
   const [auth, setAuth] = useAuth();
   return (
     <Layouts title={"best offers"}>

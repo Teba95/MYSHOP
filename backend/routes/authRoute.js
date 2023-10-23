@@ -15,6 +15,10 @@ router.post('/login', loginController);
 
 router.get('/test', requireSignIn,isAdmin, testController);
 
+router.get('/user-auth', requireSignIn, (req, res) => {
+    res.status(200).send({ok: true});
+});
+
 // router.post("/forgot-password", forgotPasswordController);
 // router.get("/orders", requireSignIn, getOrdersController);
 // router.get("/all-orders", requireSignIn, isAdmin, getAllOrdersController);
